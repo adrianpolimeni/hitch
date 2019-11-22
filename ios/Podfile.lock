@@ -28,6 +28,15 @@ PODS:
   - Firebase/Firestore (6.12.0):
     - Firebase/CoreOnly
     - FirebaseFirestore (~> 1.7.0)
+  - Firebase/Functions (6.12.0):
+    - Firebase/CoreOnly
+    - FirebaseFunctions (~> 2.5.1)
+  - Firebase/Messaging (6.12.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (~> 4.1.8)
+  - Firebase/Storage (6.12.0):
+    - Firebase/CoreOnly
+    - FirebaseStorage (~> 3.4.1)
   - FirebaseAnalytics (6.1.5):
     - FirebaseCore (~> 6.3)
     - FirebaseInstanceID (~> 4.2)
@@ -37,6 +46,7 @@ PODS:
     - GoogleUtilities/Network (~> 6.0)
     - "GoogleUtilities/NSData+zlib (~> 6.0)"
     - nanopb (= 0.3.9011)
+  - FirebaseAnalyticsInterop (1.4.0)
   - FirebaseAuth (6.3.1):
     - FirebaseAuthInterop (~> 1.0)
     - FirebaseCore (~> 6.2)
@@ -71,10 +81,27 @@ PODS:
     - leveldb-library (~> 1.22)
     - nanopb (~> 0.3.901)
     - Protobuf (>= 3.9.2, ~> 3.9)
+  - FirebaseFunctions (2.5.1):
+    - FirebaseAuthInterop (~> 1.0)
+    - FirebaseCore (~> 6.0)
+    - GTMSessionFetcher/Core (~> 1.1)
   - FirebaseInstanceID (4.2.7):
     - FirebaseCore (~> 6.0)
     - GoogleUtilities/Environment (~> 6.0)
     - GoogleUtilities/UserDefaults (~> 6.0)
+  - FirebaseMessaging (4.1.8):
+    - FirebaseAnalyticsInterop (~> 1.3)
+    - FirebaseCore (~> 6.2)
+    - FirebaseInstanceID (~> 4.1)
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.2)
+    - GoogleUtilities/Environment (~> 6.2)
+    - GoogleUtilities/Reachability (~> 6.2)
+    - GoogleUtilities/UserDefaults (~> 6.2)
+    - Protobuf (>= 3.9.2, ~> 3.9)
+  - FirebaseStorage (3.4.1):
+    - FirebaseAuthInterop (~> 1.0)
+    - FirebaseCore (~> 6.0)
+    - GTMSessionFetcher/Core (~> 1.1)
   - Folly (2018.10.22.00):
     - boost-for-react-native
     - DoubleConversion
@@ -345,6 +372,9 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
+  - Firebase/Functions
+  - Firebase/Messaging
+  - Firebase/Storage
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
@@ -377,13 +407,17 @@ SPEC REPOS:
     - BoringSSL-GRPC
     - Firebase
     - FirebaseAnalytics
+    - FirebaseAnalyticsInterop
     - FirebaseAuth
     - FirebaseAuthInterop
     - FirebaseCore
     - FirebaseCoreDiagnostics
     - FirebaseCoreDiagnosticsInterop
     - FirebaseFirestore
+    - FirebaseFunctions
     - FirebaseInstanceID
+    - FirebaseMessaging
+    - FirebaseStorage
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
@@ -455,13 +489,17 @@ SPEC CHECKSUMS:
   FBReactNativeSpec: 51477b84b1bf7ab6f9ef307c24e3dd675391be44
   Firebase: da031bc7012374e3bed17a6731b89327b29863b9
   FirebaseAnalytics: 4e53a7eb7b76bc703c4d9239bc964545e9b23361
+  FirebaseAnalyticsInterop: d48b6ab67bcf016a05e55b71fc39c61c0cb6b7f3
   FirebaseAuth: b401a012cc33b04df3b52bb308b04e8766f2693e
   FirebaseAuthInterop: 0ffa57668be100582bb7643d4fcb7615496c41fc
   FirebaseCore: bcd6c112429249d7921e907d661e8955a3549e26
   FirebaseCoreDiagnostics: af29e43048607588c050889d19204f4d7b758c9f
   FirebaseCoreDiagnosticsInterop: e9b1b023157e3a2fc6418b5cb601e79b9af7b3a0
   FirebaseFirestore: 1c7ed32c09d6b0148034e035d0c07783ca45bac3
+  FirebaseFunctions: 5af7c35d1c5e41608fecbb667eb6c4e672e318d0
   FirebaseInstanceID: ebd2ea79ee38db0cb5f5167b17a0d387e1cc7b6e
+  FirebaseMessaging: de30f83a372a390be6f2ba44ec43a45b7ccdb43f
+  FirebaseStorage: b7c6d00997bc21d4465453bdcc5cc65513110fed
   Folly: 30e7936e1c45c08d884aa59369ed951a8e68cf51
   glog: 1f3da668190260b06b429bb211bfbee5cd790c28
   GoogleAppMeasurement: 037f46d1d8ae8b312720f1042585ab961a1289e3
@@ -495,6 +533,6 @@ SPEC CHECKSUMS:
   ReactCommon: a6a294e7028ed67b926d29551aa9394fd989c24c
   Yoga: ba3d99dbee6c15ea6bbe3783d1f0cb1ffb79af0f
 
-PODFILE CHECKSUM: ff6caed55e08a9daa0520b946c33e9102d3507e5
+PODFILE CHECKSUM: 8609f56f9dadaf44e40b6c40a00b56edbe147fc3
 
 COCOAPODS: 1.8.4
