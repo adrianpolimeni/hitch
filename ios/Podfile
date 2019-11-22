@@ -33,11 +33,15 @@ target 'hitch' do
   pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
+
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Core'
-  
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Functions'
+  pod 'Firebase/Storage'
+
   target 'hitchTests' do
     inherit! :search_paths
     # Pods for testing
