@@ -12,76 +12,60 @@ import {
   StyleSheet,
   ScrollView,
   View,
-  Text,
-  StatusBar,
+  TextInput,
+  
+   
 } from 'react-native';
+import {  Button,ThemeProvider,Header, Text,  Input } from 'react-native-elements';
+import LinearGradient from 'react-native-linear-gradient';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
 
 const App: () => React$Node = () => {
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
+    <ThemeProvider  >
+      <Header
+        backgroundColor={"#5F488C"}
+        centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
+       
+      />
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center',  }}>
+              <Text h4 style={{marginBottom:40}}>Enter your mobile number</Text>
+              <TextInput
+              style={{height: 40,  width: "70%", borderColor: 'gray', borderWidth: 1, marginBottom: 20}}
+          keyboardType = "phone-pad"
+        />
+        <Text style={{marginBottom:40}}>Tap next to verify your account with your phone number.</Text>
+        <Button
+         
+             title="Next"
+             
+            containerStyle={{width:"90%",}}
+            buttonStyle={{borderRadius:15,height:50}}
+            ViewComponent={LinearGradient} // Don't forget this!
+            linearGradientProps={{
+              colors: ['#8E2DE2', '#7B4FC2'],
+              start: { x: 0, y: 0.0 },
+              end: { x: 1, y: 1 },
+            }}
+             
+           />
+             
+      </View>
+      
+    </ThemeProvider>
   );
 };
 
 const styles = StyleSheet.create({
   scrollView: {
-    backgroundColor: Colors.lighter,
+    
   },
   engine: {
     position: 'absolute',
     right: 0,
   },
   body: {
-    backgroundColor: Colors.white,
+  
   },
   sectionContainer: {
     marginTop: 32,
@@ -90,19 +74,19 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 24,
     fontWeight: '600',
-    color: Colors.black,
+
   },
   sectionDescription: {
     marginTop: 8,
     fontSize: 18,
     fontWeight: '400',
-    color: Colors.dark,
+   
   },
   highlight: {
     fontWeight: '700',
   },
   footer: {
-    color: Colors.dark,
+
     fontSize: 12,
     fontWeight: '600',
     padding: 4,
