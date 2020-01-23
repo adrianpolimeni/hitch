@@ -1,26 +1,43 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import PhoneAuth from './src/Components/Auth/PhoneAuth';
+import CodeConfirm from './src/Components/Auth/CodeConfirm';
+import Home from './src/Components/Home/Home'
+import { StackNavigator } from 'react-navigation';
+import Styles from './src/Components/Common/Styles';
 
-import PhoneAuth from './src/Components/Auth/PhoneAuth/PhoneAuth'
+const AppNavigator = StackNavigator({
+  PhoneAuthScreen: { screen: PhoneAuth, 
+    navigationOptions: ({ navigation }) => ({
+      headerTitle: "Hitch",
+      headerBackTitle: 'Back',
+      headerStyle: Styles.headerStyle,
+      headerTitleStyle: Styles.headerTitleStyle,
+      headerTintColor: "#fff"
+    })},
+  CodeConfirmScreen: {screen: CodeConfirm, 
+    navigationOptions: ({ navigation }) => ({
+      headerTitle: "Hitch",
+      headerBackTitle: 'Back',
+      headerStyle: Styles.headerStyle,
+      headerTitleStyle: Styles.headerTitleStyle,
+      headerTintColor: "#fff"
+    })},
+  HomeScreen: {screen: Home, 
+    navigationOptions: ({ navigation }) => ({
+      headerTitle: "Hitch",
+      headerBackTitle: 'Back',
+      headerStyle: Styles.headerStyle,
+      headerTitleStyle: Styles.headerTitleStyle,
+      headerLeft: null,
+      headerTintColor: "#fff"
+    })}
+});
 
-const App: () => React$Node = () => {
-  return (
-        <PhoneAuth/>
-  );
-};
-export default App;
+export default class App extends React.Component {
+  render() {
+    return (
+      <AppNavigator />
+    );
+  }
+}
+

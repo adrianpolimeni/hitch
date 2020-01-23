@@ -10,11 +10,20 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-community/masked-view": "^0.1.6",
     "react": "16.9.0",
     "react-native": "0.61.4",
+    "react-native-code-input": "^1.0.6",
     "react-native-elements": "^1.2.7",
+    "react-native-firebase": "^5.2.0",
+    "react-native-gesture-handler": "^1.5.3",
+    "react-native-material-ui": "^1.30.1",
     "react-native-phone-input": "^0.2.4",
-    "react-native-vector-icons": "^6.6.0"
+    "react-native-safe-area-context": "^0.6.2",
+    "react-native-screens": "^2.0.0-alpha.28",
+    "react-native-vector-icons": "^6.6.0",
+    "react-navigation": "^1.6.1",
+    "react-navigation-stack": "^2.0.15"
   },
   "devDependencies": {
     "@babel/core": "^7.7.2",
@@ -28,5 +37,10 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "rnpm": {
+    "assets": [
+	    "./assets/fonts/"
+    ]
   }
 }
