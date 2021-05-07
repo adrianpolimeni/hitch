@@ -5352,6 +5352,11 @@ react-lifecycles-compat@^3.0.2:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-native-clean-project@^3.3.0:
+  version "3.6.3"
+  resolved "https://registry.yarnpkg.com/react-native-clean-project/-/react-native-clean-project-3.6.3.tgz#ad43b8e1491512f285b7f455ac56db3328b5a65f"
+  integrity sha512-sBbv+Zl05O9LfQqamLu2Crb//W/d8+l59TICF8nKxQ0nJsvear06a1CB2+FaO3rCrPNHiSjDDNXZ/D6muHTUkw==
+
 react-native-code-input@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/react-native-code-input/-/react-native-code-input-1.0.6.tgz#da4b0c0e04f140698320bc81cff1107e211fe923"
@@ -6555,9 +6560,9 @@ typedarray@^0.0.6:
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
 ua-parser-js@^0.7.18:
-  version "0.7.20"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.20.tgz#7527178b82f6a62a0f243d1f94fd30e3e3c21098"
-  integrity sha512-8OaIKfzL5cpx8eCMAhhvTlft8GYF8b2eQr6JkCyVdrgjcytyOmPCXrqXFcUnhonRpLlh5yxEZVohm6mzaowUOw==
+  version "0.7.28"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
+  integrity sha512-6Gurc1n//gjp9eQNXjD9O3M/sMwVtN5S8Lv9bvOYBfKfDNiIIhqiyi01vMBO45u4zkDE420w/e0se7Vs+sIg+g==
 
 uglify-es@^3.1.9:
   version "3.3.9"
